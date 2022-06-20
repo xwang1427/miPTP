@@ -15,7 +15,7 @@ numpy==1.18.1
 ```
 ## Usage
 **-- You can run the codes step by step using command line.**  
-
+### 1.First Level Prediction
 **1.Features Exraction**  
 
 Calculate 25 features of the input fasta format transcript file.  
