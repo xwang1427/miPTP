@@ -1,10 +1,20 @@
-# The Stacking strategy-based hybrid framework for identifying non-coding RNAs
+# MicroRNA promoter identification in hunman with a three-level prediction method
 ## Introduction
-Stacking is an open-source Python-based toolkit, which operates depending on the Python environment (Python Version 2). The users only need to run the python scripts step by step to get the predicted ncRNA. 
+Our method includes three parts, (i) the datasets are represented by a novel feature extraction method called SCPseDNC, and a trained SVm model is used for first-level prediction; (ii) Ectract RPol II signal features and use the trained RF model to perform second-level prediction on the miRNA candidate promoters identified in (i); (iii) Innovatively using Pearson and Spearman correlation coefficients to characterize the correlation of RPol II distribution of promoters-promoters and promoters-non-promoters from a horizontal perspective, respectively. 
 ## Requirement
-Before running the codes, users should make sure all the following packages are installed in their Python enviroment: sys, os, numpy, math, collections, re, itertools, csv, pandas, biopython, sklearn, xgboost, lightgbm. 
+First, create the enviroment:
+'''
+conda create -n miPromPred python==3.7
+conda activate miPromPred
+'''
+Next, install the packages:
+'''
+scikit-learn==0.23.1
+pandas==1.3.5
+numpy==1.18.1
+'''
 ## Usage
-**-- You can run Stacking step by step using command line.**  
+**-- You can run the codes step by step using command line.**  
 
 **1.Features Exraction**  
 
