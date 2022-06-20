@@ -3,16 +3,16 @@
 Our method includes three parts, (i) the datasets are represented by a novel feature extraction method called SCPseDNC, and a trained SVm model is used for first-level prediction; (ii) Ectract RPol II signal features and use the trained RF model to perform second-level prediction on the miRNA candidate promoters identified in (i); (iii) Innovatively using Pearson and Spearman correlation coefficients to characterize the correlation of RPol II distribution of promoters-promoters and promoters-non-promoters from a horizontal perspective, respectively. 
 ## Requirement
 First, create the enviroment:
-'''
+```
 conda create -n miPromPred python==3.7
 conda activate miPromPred
-'''
+```
 Next, install the packages:
-'''
+```
 scikit-learn==0.23.1
 pandas==1.3.5
 numpy==1.18.1
-'''
+```
 ## Usage
 **-- You can run the codes step by step using command line.**  
 
