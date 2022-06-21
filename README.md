@@ -9,6 +9,7 @@ conda activate miPromPred
 ```
 Next, install the packages:
 ```
+sys, os, platform，argparse，re,itertools
 scikit-learn==0.23.1
 pandas==1.3.5
 numpy==1.18.1
@@ -21,10 +22,9 @@ Input the fasta file of sequences.
 ```
 # Get the feature file named *FirstLevel_Features.csv*:
 
-python ./iLearn-nucleotide-Pse.py --file fastaFile.txt --method SCPseDNC --lamada 4 --weight 0.1 --index ./index.txt --format csv --out FirstLevel_Features.csv
+python ../1.SCPseDNC/SCPseDNC.py --file fastaFile.txt --method SCPseDNC --lamada 4 --weight 0.1 --index ./index.txt --format csv --out FirstLevel_Features.csv
 ```
-**NOTE**: For other species, you can calculate the hexamer tables as follows.
-You need to input the fasta files of coding sequences and non-coding sequences.
+**1.2 prediction with trained model**
 ```
 # Get a hexame table file named *OutputHexamer_dir*:
 
