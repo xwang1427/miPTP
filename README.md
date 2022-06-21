@@ -16,14 +16,12 @@ numpy==1.18.1
 ## Usage
 **-- You can run the codes step by step using command line.**  
 ### 1.First Level Prediction
-**1.Features Exraction**  
-
-Calculate 25 features of the input fasta format transcript file.  
-Input the fasta file of transcript, and the prepared hexamer table file. (The hexamer tables used in this experiment are in the folder "HexamerTables").
+**1.1 Features Exraction**  
+Input the fasta file of sequences.
 ```
-# Get the feature file named *OutputFeatures_dir*:
+# Get the feature file named *FirstLevel_Features.csv*:
 
-python2 ExtractFeatures transcript.fa ./HexamerTables/HexamerTable_*.txt OutputFeatures_dir
+python ./iLearn-nucleotide-Pse.py --file fastaFile.txt --method SCPseDNC --lamada 4 --weight 0.1 --index ./index.txt --format csv --out FirstLevel_Features.csv
 ```
 **NOTE**: For other species, you can calculate the hexamer tables as follows.
 You need to input the fasta files of coding sequences and non-coding sequences.
