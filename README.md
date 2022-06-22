@@ -42,6 +42,7 @@ Before extract the RPol II signal, organize the sequences predicted as label 1 i
 5 colum: sequence end coordinates.  
 ```
 # Get the RPol II signal features:
+
 Rscript extractRPol2.R -i firstResults.txt -p ChipSeq_Pol2.RData -o pol2Features.csv
 ```
 **2.2 Prediction with trained Model**  
