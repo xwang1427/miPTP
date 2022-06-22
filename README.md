@@ -51,7 +51,7 @@ Rscript extractRPol2.R -i firstResults.txt -p ChipSeq_Pol2.RData -o pol2Features
 
 python secondLevelPredict.py --inputfile pol2Features.csv --predModel ./model/RF.model --outfile secondResutls.csv --outIndexfile secondIndexResult.csv
 ```
-**4.Plant-specific Model Prediction**  
+### 3.Third Level Prediction
 
 + Plant model trained with Arabidopsis data
 
