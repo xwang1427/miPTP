@@ -25,7 +25,7 @@ Input the fasta file of sequences.
 
 python ../1.SCPseDNC/SCPseDNC.py --file fastaFile.txt --method SCPseDNC --lamada 4 --weight 0.1 --index ./index.txt --format csv --out FirstLevel_Features.csv
 ```
-**1.2 prediction with trained model**
+**1.2 Prediction with trained Model**
 ```
 # Get the index file of predcited label 1 named *firstLevelPredIndex.csv*.
 
@@ -42,10 +42,9 @@ Before extract the RPol II signal, organize the sequences predicted as label 1 i
 5 colum: sequence end coordinates.  
 ```
 # Get the RPol II signal features:
-
-R 
+Rscript extractRPol2.R -i firstResults.txt -p ChipSeq_Pol2.RData -o pol2Features.csv
 ```
-**3.Cross-species Model Prediction**  
+**2.2 Prediction with trained Model**  
 You need to input the featrue file of the transcript to be predicted.
 ```
 # Get the prediction result file named *OutputPredict_dir*:
