@@ -34,8 +34,8 @@ python firstLevelPredict.py --inputfile FirstLevel_Features.csv --predModel ./mo
 
 ### 2.Second Level Prediction
 **2.1 Extract the RPol II signal**  
-Before extract the RPol II signal, organize the sequences predicted as label 1 in 1.2 into a txt file containing the following information:
-1 colum: sample annotaion information, eg. hsa-mir-1;
+Before extract the RPol II signal, organize the sequences predicted as label 1 in 1.2 into a txt file containing the following information:   
+1 colum: sample annotaion information, eg. hsa-mir-1;  
 2 colum: chromsome;
 3 colum: strand;
 4 colum: sequence start coordinates;
