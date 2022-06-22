@@ -27,7 +27,7 @@ python ../1.SCPseDNC/SCPseDNC.py --file fastaFile.txt --method SCPseDNC --lamada
 ```
 **1.2 Prediction with trained Model**
 ```
-# Get the index file of predcited label 1 named *firstLevelPredIndex.csv*.
+# Get the first-level prediction result files:
 
 python firstLevelPredict.py --inputfile FirstLevel_Features.csv --predModel ./model/SVM.model --outfile firstLevelPredResults.csv --outIndexfile firstLevelPredIndex.csv
 ```
@@ -46,11 +46,10 @@ Before extract the RPol II signal, organize the sequences predicted as label 1 i
 Rscript extractRPol2.R -i firstResults.txt -p ChipSeq_Pol2.RData -o pol2Features.csv
 ```
 **2.2 Prediction with trained Model**  
-You need to input the featrue file of the transcript to be predicted.
 ```
-# Get the prediction result file named *OutputPredict_dir*:
+# Get the second-level prediction result files:
 
-python2 SpeciesNeutralModel_predict.py TranscriptFeatures_file OutputPredict_dir
+python secondLevelPredict.py --inputfile pol2Features.csv --predModel ./model/RF.model --outfile secondResutls.csv --outIndexfile secondIndexResult.csv
 ```
 **4.Plant-specific Model Prediction**  
 
