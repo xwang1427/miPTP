@@ -9,6 +9,7 @@ conda activate miPromPred
 ```
 Next, install the packages:
 ```
+R version 3.2.3
 sys, os, platform，argparse，re,itertools
 scikit-learn==0.23.1
 pandas==1.3.5
