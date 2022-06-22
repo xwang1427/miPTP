@@ -26,9 +26,9 @@ python ../1.SCPseDNC/SCPseDNC.py --file fastaFile.txt --method SCPseDNC --lamada
 ```
 **1.2 prediction with trained model**
 ```
-# Get a hexame table file named *OutputHexamer_dir*:
+# Get the index file of predcited label 1 named firstLevelPredIndex.csv.
 
-python2 MakeHexamerTables.py codingRNA.fa noncodingRNA.fa OutputHexamer_dir.
+python firstLevelPredict.py --inputfile FirstLevel_Features.csv --predModel ./model/SVM.model --outfile firstLevelPredResults.csv --outIndexfile firstLevelPredIndex.csv
 ```
 
 **2.Model Training**  
