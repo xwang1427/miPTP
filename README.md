@@ -27,17 +27,18 @@ python ../1.SCPseDNC/SCPseDNC.py --file fastaFile.txt --method SCPseDNC --lamada
 ```
 **1.2 prediction with trained model**
 ```
-# Get the index file of predcited label 1 named firstLevelPredIndex.csv.
+# Get the index file of predcited label 1 named *firstLevelPredIndex.csv*.
 
 python firstLevelPredict.py --inputfile FirstLevel_Features.csv --predModel ./model/SVM.model --outfile firstLevelPredResults.csv --outIndexfile firstLevelPredIndex.csv
 ```
 
-**2.Model Training**  
-You need to input the coding RNA and non-coding RNA features files obtained in ***1.Features Exraction***.
+### 2.Second Level Prediction
+**2.1 Extract the RPol II signal**  
+Inout the index file of predcited label 1.
 ```
-# Get the trained models:
+# Get the RPol II signal features:
 
-python2 Model_training.py codingFeatures_file noncodingFeatures_file
+R 
 ```
 **3.Cross-species Model Prediction**  
 You need to input the featrue file of the transcript to be predicted.
