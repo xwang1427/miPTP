@@ -34,6 +34,7 @@ python firstLevelPredict.py --inputfile FirstLevel_Features.csv --predModel mode
 
 ### 2.Second Level Prediction
 **2.1 Extract the RPol II signal**  
+Get the Pol2 data (ChipSeq_Pol2.RData) from https://github.com/xwang1427/miPromPred/tree/master.  
 Before extract the RPol II signal, organize the sequences predicted as label 1 in 1.2 into a txt (Tab as the delimiter) file containing the following information (please see the example/firstResults.txt):   
 1 colum: sample annotaion information, (eg. hsa-mir-1);  
 2 colum: chromsome;  
