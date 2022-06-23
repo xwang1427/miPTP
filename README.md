@@ -57,23 +57,23 @@ Rscript thirdLevelPredict.R -i secondPredResults_Label1.csv -x GenePromoters_x.R
 ```
 
 ## Example
-+ 1 Features Exraction use SCPseDNC**  
++ 1. Features Exraction use SCPseDNC**  
 ```
 python SCPseDNC/SCPseDNC.py --file example/test.txt --method SCPseDNC --lamada 4 --weight 0.1 --index SCPseDNC/indexes.txt --format csv --out example/features_SCPseDNC.csv
 ```
-+ 2 First Level Prediciton**  
++ 2. First Level Prediciton**  
 ```
 python firstLevelPredict.py --inputfile example/features_SCPseDNC.csv --predModel model/SVM.model --outfile example/firstPredResults.csv --outIndexfile example/firstPredResults_Index.csv
 ```
-+ 3 Extract the RPol II signal
++ 3. Extract the RPol II signal
 ```
 Rscript extractRPol2.R -i example/firstResults.txt -p ChipSeq_Pol2.RData -o example/features_pol2.csv
 ```
-+ 4 Make Second Level Prediction
++ 4. Make Second Level Prediction
 ```
 python secondLevelPredict.py --inputfile example/features_pol2.csv --predModel model/RF.model --outProbfile example/secondPredResults.csv --outCandiPromfile example/secondPredResults_Label1.csv
 ```
-+ 5 Make Third Level Prediction
++ 5. Make Third Level Prediction
 ```
 Rscript thirdLevelPredict.R -i example/secondPredResults_Label1.csv -x GenePromoters_x.RData -o example/OptimalPromoters.txt
 ```
